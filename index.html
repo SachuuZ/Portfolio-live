@@ -1,1 +1,128 @@
-<h1>Portfolio Loading...</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin PV</title>
+    <!-- SEO tags -->
+    <meta name="description" content="Cybersecurity Researcher Portfolio">
+    <script>
+        window.onerror = function (msg, url, line, col, err) {
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.innerHTML += "<div style='background:red;color:white;font-size:30px;position:absolute;z-index:99999;top:0;left:0;'>GLOBAL ERROR: " + msg + " at line " + line + "</div>";
+            });
+            if (document.body) {
+                document.body.innerHTML += "<div style='background:red;color:white;font-size:30px;position:absolute;z-index:99999;top:0;left:0;'>GLOBAL ERROR: " + msg + " at line " + line + "</div>";
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile-card.css">
+</head>
+
+<body>
+    <div class="crt-overlay"></div>
+
+    <!-- Edge to Edge layout matching reference -->
+    <header class="top-bar">
+        <div class="profile-info">
+            <h1>Sachin PV</h1>
+            <span class="role">Cybersecurity Researcher</span>
+        </div>
+        <div class="external-links">
+            <a href="https://www.linkedin.com/in/sachin-p-v/" class="featured-link" target="_blank">
+                My Public profile ↗
+            </a>
+        </div>
+    </header>
+
+    <main class="content-grid">
+        <!-- Left Pane: 3D ID Card -->
+        <section class="left-pane">
+            <div class="profile-card-container">
+                <div id="profile-card-wrapper">
+                    <div class="pc-behind"></div>
+                    <div id="profile-card-shell">
+                        <div class="pc-card-face">
+                            <!-- Name + title at top, matching ReactBits layout -->
+                            <div class="pc-top-info">
+                                <h3 class="pc-name">Sachin PV</h3>
+                                <p class="pc-title-text">Cybersecurity Researcher</p>
+                            </div>
+                            <!-- Full-color photo filling center/bottom -->
+                            <img class="pc-avatar-img"
+                                src="prof.jpeg"
+                                alt="Sachin PV" />
+                            <!-- Bottom gradient + frosted info strip -->
+                            <div class="pc-card-info">
+                                <div class="pc-user-row">
+                                    <div class="pc-mini-avatar">
+                                        <img src="prof.jpeg"
+                                            alt="mini" />
+                                    </div>
+                                    <div class="pc-user-text">
+                                        <span class="pc-handle">@sachinpv</span>
+                                        <span class="pc-status">Always Available</span>
+                                    </div>
+                                    <button class="pc-contact-btn" id="contact-btn">Contact Me</button>
+                                </div>
+                            </div>
+                            <!-- Glare layer -->
+                            <div class="pc-glare"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Pane: Terminal Window -->
+        <!-- Nav is OUTSIDE the scroll container so it stays pinned -->
+        <section class="right-pane" id="terminal-body">
+            <div class="terminal-nav">
+                <ul class="quick-links">
+                    <li><a href="#" data-cmd="help">help</a> |</li>
+                    <li><a href="#" data-cmd="about">about</a> |</li>
+                    <li><a href="#" data-cmd="projects">projects</a> |</li>
+                    <li><a href="#" data-cmd="skills">skills</a> |</li>
+                    <li><a href="#" data-cmd="experience">experience</a> |</li>
+                    <li><a href="#" data-cmd="contact">contact</a> |</li>
+                    <li><a href="#" data-cmd="education">education</a> |</li>
+                    <li><a href="#" data-cmd="certifications">certifications</a> |</li>
+                    <li><a href="#" data-cmd="leadership">leadership</a> |</li>
+                    <li><a href="#" data-cmd="sudo">sudo</a> |</li>
+                    <li><a href="#" data-cmd="clear">clear</a></li>
+                </ul>
+            </div>
+
+            <!-- Scrollable terminal body -->
+            <div class="terminal-scroll" id="terminal-scroll">
+                <div class="terminal-history" id="history">
+                    <!-- Welcome message is injected by JS on load -->
+                </div>
+
+                <div class="terminal-input-line">
+                    <span class="prompt">sachin@portfolio:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bottom-bar">
+        <div class="status-left">
+            sachin@portfolio:~$
+        </div>
+        <div class="status-right" id="clock">
+            00/00/0000, 00:00:00 PM
+        </div>
+        <script>
+            document.getElementById("clock").textContent = "INLINE SCRIPT RAN!";
+        </script>
+    </footer>
+
+    <script type="text/javascript" src="script.js?v=4"></script>
+</body>
+
+</html>
